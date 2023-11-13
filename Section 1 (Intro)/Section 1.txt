@@ -1,0 +1,195 @@
+****************************************************   MySQL Notes *****************************************
+
+
+1- Course Link:
+
+https://olympus.mygreatlearning.com/courses/21462
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   Section 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+* What is database management system (DBMS):
+
+Is a software where you can store , reterive , define and manage your data in database.
+
+
+--------------------------------------------------------------
+
+* Types of database management system:
+
+1- Hierarchical Database
+
+2- Network Database 
+
+3- Reational Database
+
+4- Object-Oriented database
+
+--------------------------------------------------------------
+
+
+* Advantages of DBMS:
+
+1- DBMS has lots of techinques to store , manipulate and reterive data.
+
+2- Efficent for handling data.
+
+3- Have powerful functions to store , manipulate and reterive data.
+
+4- Data intergrity and security.
+
+5- Reduce Application Development Time.
+
+--------------------------------------------------------------
+
+
+* What is Relational Database Management System (RDBMS):
+
+RDBMS is used for the database management system. The concept is based on the relational model.
+
+
+--------------------------------------------------------------
+
+* Properties of RDBMS:
+
+1- Values are Atomic.
+
+2- Each row is different.
+
+3- Each Coloumn is different.
+
+4- Each Coloumn can have a common name.
+
+5- Stores data in a tabular form (in tables can have relations between each other).
+
+
+
+--------------------------------------------------------------
+
+
+* Types of keys in RDBMS:
+
+1- Primary Key.
+
+2- Super Key.
+
+3- Candidate Key.
+
+4- Alternate Key.
+
+5- Composite Key.
+
+6- Foreign Key.
+
+
+
+--------------------------------------------------------------
+
+* Primary Key:
+
+1- First key used to identify one and only one instance of an entity uniquely.
+
+2- The key which is most suitable from those lists becomes a primary key.
+
+
+--------------------------------------------------------------
+
+* Candidate Key:
+
+1- A candidate key is an attribute or set of attributes that can uniquely identify a tuple.
+
+2- Except for the primary key, the remaining attributes are considered a candidate key. The candidate keys are as strong as the primary key.
+
+
+--------------------------------------------------------------
+
+
+* Super Key:
+
+1- Super key is an attribute set that can uniquely identify a tuple.
+
+2- A super key is a superset of a candidate key.
+
+
+--------------------------------------------------------------
+
+* Alternate Key:
+
+1- There may be one or more attributes or a combination of attributes that uniquely identify each tuple in a relation.These attributes or combinations of the attributes are called the candidate keys.One key is chosen as the primary key from these candidate keys, and the remaining candidate key, if it exists, is termed the alternate key.
+
+2- The total number of the alternate keys is the total number of candidate keys minus the primary key. The alternate key may or may not exist. If there is only one candidate key in a relation, it does not have an alternate key.
+ 
+
+--------------------------------------------------------------
+
+
+* Composite Key:
+
+1- Whenever a primary key consists of more than one attribute, it is known as a composite key. This key is also known as Concatenated Key.
+
+EX : 
+
+in employee relations, we assume that an employee may be assigned multiple roles, and an employee may work on multiple projects simultaneously. So the primary key will be composed of all three attributes, namely Emp_ID, Emp_role, and Proj_ID in combination. So these attributes act as a composite key since the primary key comprises more than one attribute.
+
+
+--------------------------------------------------------------
+
+
+* Foreign Key:
+
+1- Foreign keys are the column of the table used to point to the primary key of another table.
+
+
+--------------------------------------------------------------
+
+
+* What is Normalization :
+
+is a stepwise formal process that allows us to decompose database tables in such a way that both data dependency and update anomalies are minimized. It makes use of functional dependency that exists in the table and the primary key or candidate key in analyzing the tables.
+
+
+--------------------------------------------------------------
+
+
+* What are phases of normalization:
+
+1- First Normal Form (INF).
+
+2- Second Normal Form (2NF).
+
+3- Third Normal Form (3NF).
+
+--------------------------------------------------------------
+
+* First Normal Form (INF): 
+
+Form a name relation for each non-atomic attribute or nested relation.
+
+
+
+--------------------------------------------------------------
+
+
+* Second Normal Form (2NF): 
+
+1- Decompose and set up a new relation for each partial key with its dependent attributes. 
+
+2- Make sure to keep a relationship with the original primary key and any attributes that are fully functionally dependent on it.
+
+
+--------------------------------------------------------------
+
+
+* Third Normal Form (3NF):
+
+Decompose and set up a relation that includes the non-key attribute(s) that functionally determine(s) another non-key attribute (s). 
+
+
+
