@@ -1,0 +1,233 @@
+****************************************************   MySQL Notes *****************************************
+
+
+1- Course Link:
+
+https://olympus.mygreatlearning.com/courses/21462
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   Section 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+* What is SQL:
+
+1- SQL stands for Standard Query Language.
+
+2- SQL helps to manipulate your database.
+
+
+--------------------------------------------------------------
+
+* Data types in MySQL:
+
+1- Char(n)   --------> Stores n characters ---------> n bytes ( where n in range (1 - 8000) )
+ 
+2- nchar(n)  --------> Stores n unicode characters  --------->  2n bytes ( where n in range (1 - 4000) )
+ 
+3- varchar(n) -------> Stores approximately n characters ------> Actual string length +2 bytes (Where n is in the range of 1 - 8000)
+
+4- varchar(max) -----> Stores up to 231 - 1 characters   ------> Actual string length +2 bytes
+
+5- nvarchar(n) -------> Stores approximately n characters -----> 2n(Actual string length) +2 bytes (Where n is in the range of 1 - 4000)
+
+6- nvarchar(max) -----> Stores up to ((231 - 1 ) / 2 ) - 2  characters -----> 2n(actual string length) +2 bytes
+
+
+--------------------------------------------------------------
+
+
+* Types of commands of MySQL:
+
+1- DDL 
+
+2- DQL
+
+3- DML 
+
+4- DCL
+
+5- TCL
+
+
+--------------------------------------------------------------
+
+
+* DDL(Data Definition Language):
+
+
+1- Helps to define the database Schema
+
+2- Deals with description of database
+
+EX:
+
+a. CREATE: this command is used to create the database
+
+b. DROP: this command is used to delete objects from database 
+
+c. ALTER: this command is used to alter or modifiy structure of database
+
+d. TRUNCATE: this command is used to remove all records from table
+
+e. COMMENT: this command is used to add comments to data dictionary.
+
+f. RENAME: this command is used to rename existing object
+
+
+EX:
+
+
+- create database MyFirstSQL;
+
+- use MyFirstSQL;
+
+- show databases;
+
+- create table student_table(
+  student_id INT,
+  student_name VARCHAR(100),
+  course_name VARCHAR(40)
+                            );
+
+- show tables ;
+
+- describe student_table;
+
+- alter table student_table add email VARCHAR(100);
+
+- truncate table student_table ;
+ 
+
+
+--------------------------------------------------------------
+
+
+* DML (Data Manipulation Language):
+
+This command is used to handle all the data manipulation part 
+
+EX: 
+
+1- INSERT : is used to insert the data in the table.
+
+2- UPDATE : helps to update exsiting data within the table.
+
+3- DELETE : to delete records from database table.
+
+
+EX:  
+
+- insert into student_table (student_id , student_name , course_name , email)
+  values (1 , "Mohamed Salah" , "System Analysis" , "Mohamed@gmail.com");
+
+
+--------------------------------------------------------------
+
+
+
+* DQL (Data Query Language):
+
+
+This command is used to make queries on data within schema objects.
+
+EX:
+
+1- Select : This command is used to reterive data from database.
+
+
+EX: 
+
+
+- select * from student_table;
+
+- select * from student_table where email = "Mohamed@gmail.com"; 
+
+
+--------------------------------------------------------------
+
+
+* DCL (Data Control Lanuage):
+
+
+- Deals with the rights and permissions of database.
+
+- Works for the controlling part of the data.
+
+
+EX: 
+
+
+- GRANT : provides user`s access privillages to database.
+
+- REVOKE : Helps to whithdraw user`s access privillages given by using GRANT command
+
+
+EX:
+
+
+When i run command to delete table from database "delete from student_table" , Error message will be rasien so the solution is to change privillage level by using
+the following command 
+
+"SET SQL_SAFE_UPDATES = 0 ; "
+
+--------------------------------------------------------------
+
+
+* TCL (Transaction Control Language):
+
+1- COMMIT : commit a Transaction. 
+
+2- ROLLBACK : rollbacks a transaction for any error occurs.
+
+3- SAVEPOINT : use a save point within a transaction.
+
+4- SET TRANSACTION : specifiy the characterstics for the transaction.
+
+
+--------------------------------------------------------------
+
+
+* Operator in MySQL:
+
+1- And operator   -------> select * from student_table where student_id = 1 and  email = "Mohamed@gmail.com"; 
+
+
+2- OR operator   --------> select * from student_table where student_id = 1 or  email = "Mohamed@gmail.com"; 
+
+
+3- Not operator   -------> select * from student_table where not student_id = 1;
+
+
+4- IN operator    -------> select * from student_table where course_name in ('System analysis' , 'Network');
+
+
+5- between opertator ---> select * from student_table where student_id between 1 and 2 ;
+
+
+
+--------------------------------------------------------------
+
+
+
+* Patteren matching operator:  (Like) operator
+
+
+Ex: 
+
+select * from student_table where email like 'f%'
+
+select * from student_table where email like '%gmail.com'
+
+
+
+
+
+
+
+
+ 
