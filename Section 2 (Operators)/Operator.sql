@@ -30,7 +30,7 @@ insert into student_table (student_id , student_name , course_name , email)
 values (1 , "Ahmed Moamen" , "Electric Circuits" , "Ahmed@gmail.com");
 
 insert into student_table (student_id , student_name , course_name , email)
-values (1 , "Ahmed Salah" , "Network" , "Ahmed@gmail.com");
+values (1 , "Fatma Salah" , "Network" , "Fatma@gmail.com");
 
 select * from student_table;
 
